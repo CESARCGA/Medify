@@ -1,0 +1,86 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: #f4f6f8;
+}
+
+/* Contenedor principal */
+.container {
+    height: 100%;
+    padding: 90px 0px 0px 250px;
+}
+
+.container-contenido{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 20px;
+    background-color: #4e9ec9;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.container-contenido .button-solicitud{
+    margin-top: 20px;
+    height: 30px;
+    background-color: #0073b1;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+h1, h2 {
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0073b1;
+    color: white;
+}
+
+.button-tabla {
+    background-color: #0073b1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.button-tabla:hover {
+    background-color: #005f87;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 70px 10px ;
+    }
+
+    .button-tabla{
+        padding: 5px 10px;
+        margin: 5px;
+    }
+}

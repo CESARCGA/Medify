@@ -1,0 +1,292 @@
+ /* Estilos generales */
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: #f4f6f8;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    padding: 70px 0px 0px 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-container{
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #4e9ec9;
+}
+
+/* Header */
+.header {
+    width: -webkit-fill-available;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0073b1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.header .logo i {
+    margin-right: 8px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0073b1;
+    font-size: 1.1rem;
+}
+
+.header .nav a:hover {
+    text-decoration: underline;
+}
+
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #0073b1;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    padding-top: 10px;
+    position: fixed;
+    left: 0;
+    top: 60px; /* Debajo del navbar */
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: #0073b1;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #f4f6f8;
+}
+
+.sidebar a.active {
+    background-color: #e4eff7;
+    font-weight: bold;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+/* Estilos móviles */
+@media (max-width: 768px) {
+    .header .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container, .sidebar {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 20;
+    }
+
+    .nav-container.active, .sidebar.active {
+        padding-top: 10px;
+        display: flex;
+        position: fixed;
+    }
+
+    .content {
+        margin-top: 70px;
+    }
+}
+
+/* Estilos grandes */
+@media (min-width: 769px) {
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .header .nav {
+        margin-top: 10px;
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        border: 1px solid #ccc;
+        z-index: 10;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container.active {
+        display: flex;
+    }
+
+    .nav, .sidebar {
+        flex-direction: column;
+    }
+}
+
+/*calendario*/
+.calendar {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#calendar-table {
+    width: 100%;
+    /*border-collapse: collapse;*/
+}
+
+#calendar-table th,
+#calendar-table td {
+    width: 14.28%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#calendar-table td.active {
+    color: black;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+#calendar-table td.active:hover {
+    background-color: #e0e0e0;
+}
+
+#calendar-table td.inactive {
+    color: #aaa;
+}
+
+/* Mobile Styles calendario */
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 0px;
+        padding-top: 70px;
+    }
+
+    #calendar-table th, #calendar-table td{
+        padding: 6px;
+    }
+}
+
+.modal {
+    justify-content: center;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container-contenido {
+    padding: 10px;
+}

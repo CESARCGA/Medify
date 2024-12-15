@@ -1,0 +1,154 @@
+ /* Estilos básicos para la página */
+ body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* El contenedor del fondo con las imágenes */
+.carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1; /* Para que esté detrás del formulario */
+}
+
+
+/* Cada imagen dentro del carrusel */
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+
+/* Estilo del contenido sobre el fondo */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Estilos del formulario de login */
+.container{
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    margin-right: 20px;
+    align-items: flex-end;
+}
+
+.login-container {
+    display: flex;
+    position: relative;
+    /* right: 33px; */
+    /* top: 50%; */
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.login-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    box-sizing: border-box; /* Hace que el padding no afecte al ancho total */
+}
+
+.login-container input[type="submit"] {
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #00d7ed;
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #00d7ed; /* Color de borde cuando el campo está en foco */
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    .container{
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin:0px;
+    }
+    
+    .login-container {
+        
+    }
+}
+
+@media (min-heigth: 768px) {
+    .container {
+        display: flex;
+        align-items: center; /* Centrar verticalmente */
+        justify-content: center; /* Centrar horizontalmente */
+        min-height: 100vh; /* Garantiza que el contenedor ocupe al menos la altura completa de la pantalla */
+        min-width: 320px; /* Evita que el contenedor se reduzca a menos de 320px */
+        margin: 0;
+        padding: 20px; /* Agregar un pequeño padding si es necesario */
+    }
+
+    .login-container {
+        width: 100%; /* Asegurar que ocupe el 100% del ancho disponible */
+        max-width: 400px; /* Limitar el tamaño máximo para evitar que el formulario sea demasiado grande */
+        min-width: 320px; /* Establecer un ancho mínimo para evitar que el formulario se estreche demasiado */
+        padding: 20px;
+        background-color: #fff; /* Fondo blanco */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        min-height: 300px; /* Establece una altura mínima para el formulario */
+    }
+}

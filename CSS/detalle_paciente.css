@@ -1,0 +1,55 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.contenido{
+    margin: 95px 20px 20px 250px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+input, textarea, select {
+    padding: 5px 0px 5px 5px;
+    /* margin: 1px; */
+    width: 100%;
+    /* padding: 10px; */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.guardar {
+    background-color: #0073b1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.guardar:hover {
+    background-color: #005f87;
+}
+.mensaje {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .contenido{
+        margin: 85px 10px ;
+    }
+}

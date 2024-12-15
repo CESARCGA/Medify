@@ -1,0 +1,151 @@
+
+/* Estilos para el botón de "Nuevo Mensaje" */
+a[href="nuevo_mensaje.php"] {
+    width: 11%;
+    margin: 10px 0px 10px 0px;
+    background-color: #0073b1;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none; /* Botón azul para nuevo mensaje */
+}
+
+/* Contenedor general */
+body {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 91px 20px 20px 265px;
+}
+
+.usuarios {
+    display: flex;
+    color: black;
+    border: 2px solid;
+    border-color: #0073b1;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 0px 5px 0px 10px;
+    flex-direction: column;
+}
+
+.usuario-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.usuario-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.badge {
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding-top: 15px;
+}
+
+.chat-header {
+    display: flex;
+    border-radius: 10px;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    background-color: #0078d4;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.messages {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-height: 500px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #fff;
+    align-self: flex-start;
+    border: 1px solid #ddd;
+}
+
+.message-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.message-input textarea {
+    padding: 10px;
+    resize: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.message-input button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background-color: #005fa3;
+}
+
+
+@media (max-width: 768px) {
+    .container{
+        margin: 70px 20px;
+    }
+
+    a[href="nuevo_mensaje.php"] {
+        width: 40%;
+    }
+}

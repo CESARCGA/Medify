@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    font-family: sans-serif;
+    text-align: center;
+    padding: 62px 20px 20px 273px;
+}
+
+
+.solicitudes-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.solicitud {
+    color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #008dc1;
+}
+.solicitud h3 {
+    margin-bottom: 10px;
+}
+.solicitud button {
+    margin: 3px;
+    padding: 5px;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+}
+
+.aceptar{
+    background-color: #4CAF50;
+}
+
+.rechazar{
+    background-color: brown;
+}
+
+.mensaje {
+    color: green;
+}
+
+.boton-regreso{
+    margin-top: 20px;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 60px 10px;
+    }
+}

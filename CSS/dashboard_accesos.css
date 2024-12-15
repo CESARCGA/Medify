@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+}
+.container{
+    text-align: center;
+    padding: 60px 20px 20px 270px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.container h1{
+    color: black;
+}
+
+.accesos-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.acceso {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #008dc1;
+}
+.acceso h3 {
+    margin-bottom: 10px;
+}
+.acceso button {
+    color: white;
+    border: 0;
+    background: #F44336;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 9px;
+}
+.mensaje {
+    color: green;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 60px 10px;
+    }
+}

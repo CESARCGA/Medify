@@ -1,0 +1,43 @@
+body{
+    font-family:sans-serif;
+}
+
+.container{
+    padding:70px 20px 20px 260px ;
+}
+.cards-container {
+    color: white;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #0065a9;
+}
+.card img {
+    max-width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.card button {
+    margin-top: 10px;
+}
+.mensaje {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .container{
+    padding: 60px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
