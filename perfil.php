@@ -48,7 +48,7 @@ if ($usuario) {
                     header("Location: profesionista.php");
                     break;
                 case 'cerrar':
-                    header("Location: login.php");
+                    header("Location: index.php");
                     break;
                 /*case 'notificaciones':
                     header("Location: notificaciones_profesionista.php");
@@ -69,7 +69,7 @@ if ($usuario) {
                     header("Location: aceptar.php");
                     break;
                 case 'cerrar':
-                    header("Location: login.php");
+                    header("Location: index.php");
                     break;
                 case 'perfil':
                     header("Location: perfil.php");

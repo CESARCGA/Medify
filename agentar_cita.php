@@ -68,7 +68,7 @@ if ($usuario) {
                     header("Location: aceptar.php");
                     break;
                 case 'cerrar':
-                    header("Location: login.php");
+                    header("Location: index.php");
                     break;
                 case 'perfil':
                     header("Location: perfil.php");

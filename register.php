@@ -261,7 +261,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
                         <input type="submit" value="Registrar">
 
-                        <a href="login.php">
+                        <a href="index.php">
                             Ya tienes cuanta? Inicia secion
                         </a>
                     </form>
